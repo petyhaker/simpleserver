@@ -24,14 +24,12 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 app.get('/',function(req,res){
 	console.log('Hello World');
-	res.sendfile('Hello to you too');
+	res.send('Hello to you too');
 });
 
 
 // get the app environment from Cloud Foundry
 var appEnv = cfenv.getAppEnv();
-
-
 
 // start server on the specified port and binding host
 app.listen(appEnv.port, '0.0.0.0', function() {
