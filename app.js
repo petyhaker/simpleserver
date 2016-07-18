@@ -1,4 +1,4 @@
-/*eslint-env node*/
+/*eslint-env node, express*/
 
 //------------------------------------------------------------------------------
 // node.js starter application for Bluemix
@@ -18,13 +18,22 @@ var cfenv = require('cfenv');
 // create a new express server
 var app = express();
 
+app.set('views', path.join(__dirname,'views'));
+app.set('view engine','jade');
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
+app.use(express.static(__dirname + '/public'));
 
 app.get('/',function(req,res){
-	console.log('Hello World');
-	res.send('Hello to you too');
+	console.log('Hitting "Welcome" page');
+	res.render('index', {title:'Welcome'});
+});
+
+app.get('/about',function(req,res){
+	console.log('Hitting "About" page');
+	res.render('about');
 });
 
 
