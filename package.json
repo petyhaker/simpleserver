@@ -7,6 +7,9 @@
 	},
 	"dependencies": {
 		"express": "4.13.x",
+		"body-parser": "*",
+		"jade": "*",
+		"nodemailer":"*",
 		"cfenv": "1.0.x"
 	},
 	"repository": {},
