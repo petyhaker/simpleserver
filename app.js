@@ -36,6 +36,10 @@ app.get('/about',function(req,res){
 	res.render('about');
 });
 
+app.get('/contact',function(req,res){
+	console.log('Hitting "Contact" page');
+	res.render('contact');
+});
 
 // get the app environment from Cloud Foundry
 var appEnv = cfenv.getAppEnv();
