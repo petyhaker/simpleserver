@@ -6,4 +6,5 @@ It features express, jade and bootstrap css.
 
 The code is on bluemix and the website is here: http://sserver.mybluemix.net/
 
-P.S. There is no direct link between the bluemix code and this repository. 
+
+<a href="https://bluemix.net/deploy?repository=https://hub.jazz.net/git/idsorg/sample-java-cloudant" target="_blank"><img src="http://bluemix.net/deploy/button.png" alt="Bluemix button" /></a>
